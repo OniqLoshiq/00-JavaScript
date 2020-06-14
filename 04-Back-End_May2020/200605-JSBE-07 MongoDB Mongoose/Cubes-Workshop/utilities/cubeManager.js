@@ -33,7 +33,7 @@ class CubeManager {
         if (!to && from) {
             result = result.where('difficultyLevel').gte(from);
         } else if (!from && to) {
-            result = result.where('difficultyLevel').lte(to).lte(to);
+            result = result.where('difficultyLevel').lte(to);
         } else if (from && to) {
             result = result.where('difficultyLevel').gte(from).lte(to);
         }

@@ -1,0 +1,13 @@
+{{> search}}
+
+{{#each cubes}}
+<div class="cube">
+  <img class="cube"
+    src="{{this.imageUrl}}">
+  <p class="name">{{this.name}}</p>
+  <p><span>Difficulty level:</span> {{this.difficultyLevel}}</p>
+  <a class="btn" href="/cube/details/{{this._id}}">Details</a>
+</div>
+{{else}}
+<h1>NO CUBES WERE FOUND</h1>
+{{/each}}
